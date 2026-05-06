@@ -1,9 +1,0 @@
-bybit:
-  api-key: 2OXikjfCgJm5egtPqn
-  api-secret: VKwkImhRhVOkFCWmeKC3rKdn6V3dvkrdQH15
-  base-url: https://api-testnet.bybit.com
-  testnet: true
-
-spring:
-  application:
-    name: tradingBot
