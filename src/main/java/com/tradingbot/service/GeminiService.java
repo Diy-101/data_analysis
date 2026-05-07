@@ -11,6 +11,9 @@ public class GeminiService {
 
     private final Client client;
 
+    @Value("${gemini.model}")
+    private String model;
+
     public GeminiService(@Value("${gemini.api-key}") String apiKey) {
         this.client = Client.builder().apiKey(apiKey).build();
     }
@@ -18,7 +21,7 @@ public class GeminiService {
     public String generateAIResponse(String promt) {
         GenerateContentResponse AIResponse =
                 client.models.generateContent(
-                        "gemini-3-flash-preview",
+                        model,
                         promt,
                         null
                 );

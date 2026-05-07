@@ -1,9 +1,11 @@
 package com.tradingbot.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 public class TradingService {
 
@@ -24,7 +26,7 @@ public class TradingService {
             String BybitResponse = bybitService.getPrice(tradingPair);
             return geminiService.generateAIResponse(basePromt + BybitResponse);
         } catch (Exception e) {
-            System.out.println("Ошибка: " + e.getMessage());
+            log.error("Ошибка анализа | pair={} error={}", tradingPair, e.getMessage());
             return null;
         }
     }
