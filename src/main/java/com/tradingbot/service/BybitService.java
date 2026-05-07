@@ -1,11 +1,11 @@
-package com.tradingbot.api;
+package com.tradingbot.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
-public class BybitClient {
+public class BybitService {
 
     @Value("${bybit.api-key}")
     private String apiKey;
