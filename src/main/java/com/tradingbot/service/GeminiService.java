@@ -2,7 +2,6 @@ package com.tradingbot.service;
 
 import com.google.genai.Client;
 import com.google.genai.types.GenerateContentResponse;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
