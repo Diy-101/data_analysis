@@ -26,8 +26,6 @@ public class Schedular {
 
     @Scheduled(fixedDelay = 10000) // каждые 10 секунд
     public void run() {
-        System.out.println("=== Scheduler запустился ===");
         System.out.println(tradingService.checkMarket(tradingPair));
-        System.out.println(marketInfoService.getFearAndGreedIndex());
     }
 }

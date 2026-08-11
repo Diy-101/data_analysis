@@ -1,0 +1,11 @@
+### Текущая цена
+GET https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT
+
+### Свечи за 24 часа
+GET https://api.bybit.com/v5/market/kline?category=spot&symbol=BTCUSDT&interval=60&limit=24
+
+### Long/Short ratio
+GET https://api.bybit.com/v5/market/account-ratio?category=linear&symbol=BTCUSDT&period=1h&limit=1
+
+### Fear and Greed
+GET https://api.alternative.me/fng/
